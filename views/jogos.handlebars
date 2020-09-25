@@ -1,0 +1,158 @@
+<!-- ALERT PARA OPÇÃO DE COMPRA -->
+<script>
+  function compra(){
+    alert('Compra realizada. Enviaremos o Boleto em seu email!')
+  }
+
+  $('#meuModal').on('shown.bs.modal', function () {
+  $('#meuInput').trigger('focus')
+})
+</script>
+
+<!-- SLIDE DE IMAGENS-->
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+  </ol>
+  <!-- INICIO DE IMAGENS -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://tecnoblog.net/meiobit/wp-content/uploads/2017/01/20170123call-of-duty-1.jpg"
+       class="rounded mx-auto d-block w-100" alt="Imagem">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>SEJAM BEM VINDO À LOJA ONLINE RAGNAROK</h1>
+        <p>Escolha uma loja para comprar.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://redenoticia.es/wp-content/uploads/2017/03/apostas-futebol-brasileiro.png"
+       class="rounded mx-auto d-block w-100" alt="Imagem">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>COMPRE ONLINE</h1>
+         <p>Com o melhor preço.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://images.hdqwalls.com/wallpapers/god-of-war-4-atreus-8e.jpg" 
+      class="rounded mx-auto d-block w-100" alt="Imagem">
+      <div class="carousel-caption d-none d-md-block">
+        <h1>OS MELHORES JOGOS</h1>
+         <p>Clássicos.</p>
+      </div>
+    </div>
+  </div>
+  <!-- BOTÕES DE NAVEGAÇÃO ENTRE AS IMAGENS -->
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Próximo</span>
+  </a>
+</div>
+
+<div class="jumbotron jumbotron-fluid fonte">
+  <div class="container-texto">
+    <h6 class="display-4">Encontre o Jogo perfeito para você</h6>
+    <p class="lead">Compre online ou veja a disponibilidade em nossas lojas físicas.</p>
+  </div>
+</div>
+
+<!-- CARDS PARA DEMONSTRAÇÃO DOS JOGOS DISPONÍVEIS -->
+<!-- PARA EXIBIÇÃO DA DESCRIÇÃO DOS JOGOS, PASSAR O MOUSE EM CIMA DA IMAGEM -->
+{{#each jogos}}
+<div class="card">
+  <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="{{this.dataValues.imagem}}" alt="Avatar" class="card-img-top">
+    </div>
+    <div class="flip-card-back">
+      <div class="desc fonte">
+        <h4 class="fonte">
+          Descrição do Jogo
+        </h4>
+          <div class="fonte">
+          {{this.dataValues.descricao}}
+          </div>
+      </div>
+    </div>
+  </div>
+</div> 
+  <div class="card-body">
+    <h5 class="card-title fonte">
+      {{this.dataValues.nome_jogo}}
+    </h5>
+    <h6 class="card-title-plataformas fonte">
+      Plataformas: <i>{{this.dataValues.plataformas}}</i>
+    </h6>
+    <p class="card-text fonte">
+      Valor: <b>R${{this.dataValues.preco}}</b>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <h6 class="fonte">{{this.dataValues.lojas}}</h6>
+        <a href="lojas">
+          Ver lojas no Mapa
+        </a>
+    </div>
+   <!-- Botão para acionar modal -->
+    <button type="button" class="btn btn-info fonte" data-toggle="modal" data-target="#modalExemplo">
+      Comprar
+    </button>
+     <a class="btn btn-success fonte" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+      Lojas Disponíveis
+    </a>
+  </div>
+</div>
+
+<!-- Modal para form -->
+<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fonte" id="exampleModalLabel">Realizar Compra</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Form para informações da compra -->
+        <!-- Para propósito de teste, a compra receberá apenas as informações do usuário.
+              Melhorias futuras receberão pagamento por CC e validações.
+        -->
+        <form class="fonte">
+          <div class="form-group">
+            <div class="form-group">
+              <label for="exampleInputPassword1">Insira seu Nome</label>
+              <input type="text" class="form-control" required id="exampleInputPassword1" placeholder="Nome">
+            </div>
+             <div class="form-group">
+              <label for="exampleInputPassword1">Insira seu Email</label>
+              <input type="email" class="form-control" required id="exampleInputPassword1" placeholder="Email">
+            </div>
+            <label for="exampleInputPassword1">Insira seu Endereço</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Endereço" required>
+            <input type="text" class="form-control input" id="exampleInputPassword1" placeholder="Cidade" required>
+            <input type="text" class="form-control input" id="exampleInputPassword1" placeholder="Estado" required>
+            <small id="emailHelp" class="form-text text-muted">Pagamento por Boleto</small>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-success" onclick="compra()">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}} 
+<!-- RODAPÉ -->
+<footer class="footer" role="contentinfo">
+	<div class="container footer-info">
+		<div class="footer-text fonte">LOJAS HAGNAROK</div>
+		<i><p class="copy-right fonte">Copyright © 2020.</p></i>
+	</div>
+</footer>

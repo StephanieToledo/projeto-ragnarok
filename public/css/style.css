@@ -1,0 +1,235 @@
+.fonte{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p{
+    font-size: 18px;
+}
+
+.carousel-inner{
+    height: 600px; 
+    margin-top: 10px;
+}
+
+.card{
+    width: 417px;
+    display:inline-block; 
+    margin-top: 30px; 
+    margin-bottom: 40px;
+    margin-left: 90px;
+    position: relative;
+    background-color: rgb(209, 223, 215);
+}
+
+.card:hover .imagem{
+    transform: rotateY(180deg);
+}
+
+.card-img-top{
+    height: 520px;
+    width: 415px;
+}
+
+.imagem {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  }
+  
+.capa {
+    display: none;
+}
+
+.imagem:hover .capa {
+    display: block;
+    margin-bottom: 10px;
+    box-shadow: 0 8px 16px 0 rgba(116, 107, 107, 0.2), 0 6px 20px 0 rgba(104, 98, 98, 0.19);
+}
+
+.capa {
+    background: rgb(209, 223, 215, 0.9);
+    min-height: 460px;
+    max-height: auto;
+    position: absolute;
+    top: 0;
+}
+
+.card-body{
+    background-color: rgb(209, 223, 215);
+    box-shadow: 0 8px 16px 0 rgba(139, 121, 121, 0.2), 0 6px 20px 0 rgba(238, 232, 232, 0.19);
+}
+
+.collapse{
+    min-width: 150px;
+    max-width: auto;
+    box-shadow: 0 8px 16px 0 rgba(139, 121, 121, 0.2), 0 6px 20px 0 rgba(75, 73, 73, 0.19);
+    height: 80px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+h6{
+    padding-top: 15px;
+}
+
+.desc{
+    margin-top: 60px;
+    text-align: left;
+    font-family: sans-serif;
+    word-spacing: 1px;
+    margin-left: 10px;
+}
+
+a{
+    text-decoration:none;
+    color: dimgrey;
+}
+
+a:hover{
+    text-decoration:none;
+    color: darkgray;
+}
+
+.card-text{
+    text-align: center;
+}
+
+.btn-info{
+    width: 130px;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+
+.btn-success{
+    width: 160px;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+
+.btn-danger{
+    width: 160px;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+
+.input{
+    margin-top: 15px;
+}
+
+.card-title{
+    font-size: 22px;
+    text-align: center;
+}
+
+.card-title-plataformas{
+    text-align: center;
+    font-size: 18px;
+}
+
+.jumbotron{
+    background-color: rgba(66, 112, 97, 0.6);
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 50px;
+}
+
+.flip-card {
+    background-color: rgb(209, 223, 215, 0.9);
+    width: 400px;
+    height: 520px;
+    perspective: 1000px; 
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    width: 415px;
+}
+
+.flip-card-back {
+    background-color: rgb(209, 223, 215);
+    color: black;
+    transform: rotateY(180deg);
+    width: 415px;
+    margin-left: -15px;
+}
+
+.container-mapa {
+    width: 550px;
+    height: 450px;
+    background-color:rgba(0, 0, 0, 0.2);
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    margin-bottom: 70px;
+}
+
+h2{
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.mapouter {
+    position:relative;
+    text-align:right;
+    height:366px;
+    width:458px;
+    padding-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    height:366px;
+    width:458px;
+}
+
+.footer{
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    background: -webkit-gradient(linear, left top, right top, from(rgb(131, 153, 150)), to(#114747)) no-repeat;
+    background: -moz-linear-gradient(left, #CCCCCC, #000000);
+    filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#CCCCCC', EndColorStr='#000000');
+}
+
+.footer-text{
+    font-size: 20px;
+    text-align: center;
+    color: rgb(34, 33, 33);
+    margin-top: 20px;
+}
+
+.copy-right{
+    text-align: center;
+    margin-top: 20px;
+}

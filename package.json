@@ -1,0 +1,25 @@
+{
+  "name": "projeto-primi",
+  "version": "1.0.0",
+  "description": "Site da loja Ragnarok para compra de jogos online.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "mysql"
+  ],
+  "author": "Stephanie Toledo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "googlemaps": "^1.12.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.5"
+  }
+}
